@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html 
+    xmlns:p="http://primefaces.org/ui"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title><ui:insert name="title">Централизованная система управления изменениями проектов</ui:insert></title>
+	
+	<h:outputScript library="js" name="locale_ru.js" />
+	<!-- <h:outputScript library="js" name="autoLogoff.js" /> -->
+	
+</h:head>
+
+<h:body>
+<!-- <script type="text/javascript" src="js/autoLogoff.js"></script> -->
+<h:outputStylesheet library='css' name='main.css' />
+
+<p:growl id="msgs" showDetail="true" autoUpdate="true"/>
+	<ui:debug hotkey="x" />
+	
+	<div class="container">
+    	<div class="content">
+    		<ui:insert name="content">
+    				Content area.  See comments below this line in the source.
+			</ui:insert>
+    	</div>
+    		
+    	<div class="menu">
+    		<ui:insert name="menu">
+			<ui:include src="menu.xhtml" />
+		</ui:insert>
+    	</div>
+    </div>
+	
+</h:body>
+
+</html>
